@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: development
+      INFLUXDB_URL: "http://simulated-backend_influxdb_1:8086/"
+      INFLUXDB_TOKEN: "Bf3mupUcf1GNfCtGpWlKIwUCdY1w0RNDcL1sQ3w3QIg199PXd08yWUooakGqeU4ekpC52ij_GlsPF2eLHjT5kQ=="
+      INFLUXDB_ORG: "UofG"
+      INFLUXDB_BUCKET: "Dashboard"
+    depends_on:
+      - influxdb
+
+  influxdb:
+    image: influxdb:latest
+    ports:
+      - "8086:8086"
+    environment:
+      INFLUXDB_HTTP_AUTH_ENABLED: "true"
+      INFLUXDB_ADMIN_USER: admin
+      INFLUXDB_ADMIN_PASSWORD: admin
+    volumes:
+      - influxdb-storage:/var/lib/influxdb
+
+volumes:
+  influxdb-storage:
