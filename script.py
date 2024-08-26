@@ -2,9 +2,9 @@ import random
 from influxdb_client import InfluxDBClient, Point
 import time
 
-# Token Bf3mupUcf1GNfCtGpWlKIwUCdY1w0RNDcL1sQ3w3QIg199PXd08yWUooakGqeU4ekpC52ij_GlsPF2eLHjT5kQ==
+# Token -jVy1sM1HCIeyER_I17lxK0jM7WPc2tJd1dzW2zLKBVOEN_sM1u4gKRGY6KIwuI8f2886-bDcSIzl7f2CETFQA==
 INFLUXDB_URL = "http://simulated-backend_influxdb_1:8086/"
-INFLUXDB_TOKEN = "Bf3mupUcf1GNfCtGpWlKIwUCdY1w0RNDcL1sQ3w3QIg199PXd08yWUooakGqeU4ekpC52ij_GlsPF2eLHjT5kQ=="
+INFLUXDB_TOKEN = "-jVy1sM1HCIeyER_I17lxK0jM7WPc2tJd1dzW2zLKBVOEN_sM1u4gKRGY6KIwuI8f2886-bDcSIzl7f2CETFQA=="
 INFLUXDB_ORG = "UofG"
 INFLUXDB_BUCKET = "Dashboard"
 
